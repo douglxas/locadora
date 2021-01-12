@@ -104,7 +104,7 @@ public class JFListarFilmes extends JFrame {
 					int opcao = JOptionPane.showConfirmDialog(null, "Deseja excluir o filme selecionado?"
 							,"Exclusão", JOptionPane.YES_NO_OPTION); 
 					if (opcao == 0) {
-						FilmeDAO = new FilmeDAO();
+						FilmeDAO dao = new FilmeDAO();
 						Filme f = new Filme();
 						f.setIdFilme((int) jtFilme.getValueAt(jtFilme.getSelectedRow(), 0));
 						dao.delete(f);
